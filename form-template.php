@@ -104,7 +104,7 @@ $url = plugin_dir_url(__FILE__);
           </div>
           <div class="col-2 text">
             Ready for Low Fees with USBSwiper?
-            <a href="#">SIGNUP AND LAUNCH TERMINAL</a>
+            <a href="https://calendar.app.google/9CbqksVxLWxJFS7V9">SCHEDULE A 15 MIN. CONSULT</a>
           </div>
         </div>
 
