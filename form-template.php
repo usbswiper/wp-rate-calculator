@@ -12,7 +12,7 @@ $url = plugin_dir_url(__FILE__);
           <div class="col-1">
             <label
               >AVERAGE<span class="sub"
-                >Transactions Amount <span class="req">*</span></span
+                >Transaction Amount <span class="req">*</span></span
               ></label
             >
           </div>
