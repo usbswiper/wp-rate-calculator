@@ -1,10 +1,20 @@
 <?php
-/*
-Plugin Name: Credit Strength Calculator
-Description: A WordPress plugin for calculating credit strength
-Version: 1.0
-Author: Shahzaib Khan (CB)
-*/
+/**
+ * @wordpress-plugin
+ * Plugin Name:       Fees Comparison Calculator
+ * Plugin URI:        https://store.usbswiper.com/
+ * Description:       Compare competitors to see what rates you'll get so you can choose the best option.
+ * Version:           1.0.0
+ * Author:            USBSwiper
+ * Author URI:        https://store.usbswiper.com/
+ * License:           GNU General Public License v3.0
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain:       fees-comparison-calculator
+ * Domain Path:       /i18n/languages/
+ * GitHub Plugin URI: https://github.com/usbswiper/wp-rate-calculator
+ * Requires at least: 5.8
+ * Tested up to: 6.5.5
+ */
 
 // Enqueue external CSS and JavaScript files
 function cc_strength_calc_enqueue_scripts() {
