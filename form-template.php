@@ -328,7 +328,7 @@ $url = plugin_dir_url(__FILE__);
             <div class="item light data-stripe show">N/A</div>
           </div>
           <div class="table-footer">
-            <div class="label">Total Monthly Fees paid</div>
+            <div class="label">Total Monthly Fees Paid</div>
             <div class="item dark tableNetOutput5 data-usb">$850.36</div>
             <div class="item light tableNetOutput6 data-quick">$906.84</div>
             <div class="item light data-square hide"></div>
