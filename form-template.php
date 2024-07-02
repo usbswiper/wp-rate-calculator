@@ -96,7 +96,7 @@ $url = plugin_dir_url(__FILE__);
             <div class="output-wrap">
               <label
                 >AVERAGE Monthly<span class="sub"
-                  >Transactions Volume</span
+                  >Transaction Volume</span
                 ></label
               >
               <div class="output1">$166,500</div>
@@ -148,7 +148,7 @@ $url = plugin_dir_url(__FILE__);
             </div>
             <div class="flex flex-two">
               <div class="col-1">
-                <div class="label">Invoices paid with</div>
+                <div class="label">Invoices Paid With</div>
                 <div class="input input-img">
                   <div class="images">
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/6.png" />
@@ -164,7 +164,7 @@ $url = plugin_dir_url(__FILE__);
                 </div>
               </div>
               <div class="col-2">
-                <div class="label">Invoices paid with</div>
+                <div class="label">Invoices Paid With</div>
                 <div class="input input-img">
                   <div class="images">
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/8.png" />
@@ -192,7 +192,7 @@ $url = plugin_dir_url(__FILE__);
         </div>
       </div>
       <div class="tables">
-        <h2>USBSwiper v/s Competitors</h2>
+        <h2>USBSwiper vs. Competitors</h2>
         <p class="mobile">Choose a competitor and compare payment fees</p>
         <select class="mobile select-mobile">
           <option value="1">USBSwiper vs. Stripe</option>
@@ -280,7 +280,7 @@ $url = plugin_dir_url(__FILE__);
             </div>
           </div>
           <div class="table-footer">
-            <div class="label">Total Monthly Fees paid</div>
+            <div class="label">Total Monthly Fees Paid</div>
             <div class="item dark tableNetOutput1 data-usb">$850.36</div>
             <div class="item light tableNetOutput2 data-quick">$906.84</div>
             <div class="item light tableNetOutput3 data-square hide">
