@@ -1,0 +1,690 @@
+.credit-strength-calc {
+  font-family: 'Montserrat', sans-serif;
+}
+.credit-strength-calc h1 {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0px;
+  padding: 0px;
+}
+.credit-strength-calc p {
+  padding: 0px !important;
+  margin: 0px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  width: 87%;
+  color: #666;
+  font-weight: 700;
+  line-height: 21px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+.credit-strength-calc .calculator {
+  border: 1px solid #e2d2d2;
+  border-radius: 10px;
+}
+.credit-strength-calc .flex.flex-three {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #e2d2d2;
+  align-items: center;
+}
+.credit-strength-calc .flex.flex-two {
+  display: flex;
+  border-bottom: 1px solid #e2d2d2;
+  align-items: center;
+}
+.credit-strength-calc .flex.flex-two .col-1 {
+  padding: 10px 20px;
+}
+.credit-strength-calc .flex.flex-two .col-2 {
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+.credit-strength-calc .flex.flex-two-third {
+  display: flex;
+  padding: 20px;
+}
+.credit-strength-calc .flex.flex-three .col-1 {
+  width: 25%;
+}
+.credit-strength-calc .flex.flex-three .col-2 {
+  width: 15%;
+}
+.credit-strength-calc .flex.flex-three .col-3 {
+  width: 60%;
+}
+.credit-strength-calc .flex.flex-three label span {
+  display: block;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.credit-strength-calc .flex.flex-three label {
+  text-transform: uppercase;
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.credit-strength-calc .flex.flex-three label span.sub {
+  display: flex;
+}
+.credit-strength-calc .flex.flex-three label span.req {
+  color: red;
+}
+.credit-strength-calc .flex-input input {
+  border: none;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: right;
+}
+.credit-strength-calc .flex-input {
+  display: flex;
+  border: 1px solid #ccc;
+  width: 80%;
+  padding: 8px 10px;
+  gap: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.credit-strength-calc .output-wrap span {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+}
+.credit-strength-calc .output-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.credit-strength-calc .output-wrap div {
+  text-align: center;
+  display: block;
+  width: 39%;
+  color: #004b90;
+  font-weight: bold;
+  font-size: 21px;
+}
+.credit-strength-calc .output-wrap label {
+  width: 208px;
+  text-transform: uppercase;
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.credit-strength-calc .flex.flex-two .col-2.text {
+  color: black;
+  font-size: 12px;
+  width: 60%;
+  text-align: center;
+  padding: 30px 10px 30px 10px;
+}
+.credit-strength-calc .flex.flex-two .col-2.text a {
+  font-weight: bold;
+  margin-left: 5px;
+  color: #68a4c4;
+  border-bottom: 1px solid #68a4c4;
+}
+.credit-strength-calc .col-two-third h3 {
+  margin: 0px !important;
+  padding: 0px;
+  font-size: 14px !important;
+  margin-bottom: 17px !important;
+}
+.credit-strength-calc .output-wrap span {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.credit-strength-calc .col-two-third {
+  width: 60%;
+}
+.credit-strength-calc .col-two-third .flex.flex-two {
+  gap: 20px;
+}
+.credit-strength-calc .col-two-third .flex.flex-two .col-1, .credit-strength-calc .col-two-third .flex.flex-two .col-2 {
+  border: none;
+  width: 50%;
+  padding: 0px;
+}
+.credit-strength-calc .col-one-third {
+  width: 40%;
+}
+.credit-strength-calc .col-two-third .flex.flex-two .col-1 .label, .credit-strength-calc .col-two-third .flex.flex-two .col-2 .label {
+  font-size: 14px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.credit-strength-calc .col-two-third .flex.flex-two .col-1 .input input, .credit-strength-calc .col-two-third .flex.flex-two .col-2 .input input {
+  border: none;
+  width: 100%;
+  padding: 8px 11px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.credit-strength-calc .col-two-third .flex.flex-two .col-1 .slide, .credit-strength-calc .col-two-third .flex.flex-two .col-2 .slide {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.credit-strength-calc .col-two-third .flex.flex-two {
+  border: none;
+}
+.credit-strength-calc .col-one-third {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.credit-strength-calc .chart {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.credit-strength-calc .tables h2 {
+  text-align: center;
+  font-weight: 700;
+}
+.credit-strength-calc .tables {
+  margin-top: 30px;
+}
+.credit-strength-calc .table {
+  border: 1px solid #e8e8e8;
+}
+.credit-strength-calc .table-header {
+  background: #f4f4f4;
+  display: flex;
+  flex-wrap: wrap;
+}
+.credit-strength-calc .table-footer {
+  background: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+}
+.credit-strength-calc .table-data {
+  display: flex;
+  flex-wrap: wrap;
+}
+.credit-strength-calc .label.label-logo {
+  width: 35%;
+}
+.credit-strength-calc .table-data .item {
+  width: 16.25%;
+  text-align: center;
+}
+.credit-strength-calc .table-data .label, .credit-strength-calc .table-data .item {
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.credit-strength-calc .table-header {
+  padding: 20px;
+  text-align: center;
+}
+.credit-strength-calc .table-header .label {
+  width: 35%;
+}
+.credit-strength-calc .table-header .item {
+  width: 16.25%;
+}
+.credit-strength-calc .table-footer .label, .credit-strength-calc .table-footer .item {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.credit-strength-calc .table-footer .label {
+  width: 35%;
+}
+.credit-strength-calc .table-footer .item {
+  width: 16.25%;
+}
+.credit-strength-calc .item.dark {
+  background: #00b67a;
+  color: white;
+  font-weight: bold;
+}
+.credit-strength-calc .item span {
+  display: flex;
+  font-weight: normal;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.credit-strength-calc .item.light {
+  background: #f4f4f4;
+  border: 1px solid white;
+  color: black;
+}
+.credit-strength-calc .item.light {
+  font-weight: 600;
+}
+.credit-strength-calc .ui-widget.ui-widget-content {
+  background: #e3e3e3;
+  border-radius: 14px;
+  border: none;
+  height: 0.65em !important;
+}
+.credit-strength-calc .ui-state-default, .credit-strength-calc .ui-widget-content .ui-state-default {
+  background-color: #6aa5c5;
+  border: 2px solid #6aa5c5;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.credit-strength-calc .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.credit-strength-calc .ui-widget.ui-widget-content {
+  width: 75%;
+}
+.credit-strength-calc .start {
+  width: 20%;
+  font-weight: bold;
+  font-size: 15px;
+}
+.credit-strength-calc .end {
+  width: 20%;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 20px;
+}
+.credit-strength-calc .full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.credit-strength-calc .output {
+  background: #00b67a;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  width: 88px;
+  text-align: center;
+}
+.credit-strength-calc .input.input-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.credit-strength-calc .input.input-img input {
+  width: 70px !important;
+  padding: 6px 9px !important;
+  height: auto !important;
+  font-size: 13px !important;
+  font-weight: bold;
+}
+.credit-strength-calc .input.input-img .images img {
+  height: 16px;
+}
+.credit-strength-calc .images.img1 img {
+  height: 24px !important;
+}
+.credit-strength-calc .input.input-img.img2 img {
+  height: 30px;
+}
+.credit-strength-calc input#input3Value {
+  background: #9bc4e3;
+  text-align: center;
+  color: black;
+}
+.credit-strength-calc input#input4Value {
+  background: #bcd4ec;
+  text-align: center;
+  color: black;
+}
+.credit-strength-calc input#input5Value {
+  background: #2c74b4;
+  text-align: center;
+  color: white;
+}
+.credit-strength-calc input#input6Value {
+  background: #5c9cd4;
+  text-align: center;
+  color: white;
+}
+.credit-strength-calc .item.prod-logo.prod-logo1 img {
+  margin: 0 auto;
+  display: block;
+  height: 37px;
+}
+.credit-strength-calc .item.prod-logo.prod-logo2 img {
+  height: 29px;
+  filter: grayscale(100%);
+  margin: 0 auto;
+  display: block;
+}
+.credit-strength-calc .item.prod-logo.prod-logo3 img {
+  height: 33px;
+  filter: grayscale(100%);
+  margin: 0 auto;
+  display: block;
+}
+.credit-strength-calc .item.prod-logo.prod-logo4 img {
+  filter: grayscale(100%);
+  margin: 0 auto;
+  display: block;
+}
+.credit-strength-calc .table-header {
+  display: flex;
+  align-items: center;
+}
+.credit-strength-calc .table-header .label {
+  font-weight: bold;
+}
+.credit-strength-calc .table-footer .label {
+  font-weight: bold;
+}
+.credit-strength-calc .label.label-logo {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+}
+.credit-strength-calc .label.label-logo .images {
+  margin-top: 1px;
+}
+.credit-strength-calc .barchart {
+  display: none;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 22px;
+  border-radius: 5px;
+}
+.credit-strength-calc div#paymentTypeError {
+  font-size: 13px;
+  background: red;
+  color: white;
+  padding: 3px 6px;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+.credit-strength-calc .range-input {
+  border: none;
+  background: none;
+  text-align: center;
+  width: 45px;
+  font-weight: bold;
+  font-size: 15px;
+  background: #f0f0f0;
+  font-size: 12px;
+  padding: 7px 0px;
+  border-radius: 5px;
+}
+.credit-strength-calc .terminal-card-bars .bars {
+  transform: rotate(-90deg);
+  position: relative;
+  left: -345px;
+  top: -98px;
+}
+.credit-strength-calc .content-outside {
+  display: none;
+}
+.credit-strength-calc .output.error {
+  background: #ff0f00;
+}
+.credit-strength-calc .tooltip {
+  display: none;
+  position: absolute;
+  min-width: 50px;
+  max-width: 200px;
+  text-align: center;
+  min-height: 16px;
+  max-height: 150px;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: #fff;
+  padding: 8px !important;
+  border-radius: 2px !important;
+  z-index: 3000;
+  line-height: 16px;
+  font-size: 12px;
+  opacity: 0.01;
+  -webkit-transition: opacity 75ms linear;
+  -moz-transition: opacity 75ms linear;
+  -ms-transition: opacity 75ms linear;
+  transition: opacity 75ms linear;
+ /* -webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));
+  -moz-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));
+  filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));
+  -webkit-transform: translateY(0);
+  -webkit-backface-visibility: hidden;
+  */
+}
+.credit-strength-calc .tooltip-callout {
+  position: absolute;
+}
+.credit-strength-calc .tooltip .tooltip-callout:before, .credit-strength-calc .tooltip .tooltip-callout:after {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.credit-strength-calc .tooltip.left .tooltip-callout:before, .credit-strength-calc .tooltip.left .tooltip-callout:after {
+  left: 100%;
+}
+.credit-strength-calc .tooltip.left .tooltip-callout:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  top: 50%;
+  margin-top: -5px;
+}
+.credit-strength-calc .tooltip.right .tooltip-callout:before, .credit-strength-calc .tooltip.right .tooltip-callout:after {
+  right: 100%;
+}
+.credit-strength-calc .tooltip.right .tooltip-callout:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  top: 50%;
+  margin-top: -5px;
+}
+.credit-strength-calc .tooltip.below .tooltip-callout:before, .credit-strength-calc .tooltip.below .tooltip-callout:after {
+  bottom: 100%;
+}
+.credit-strength-calc .tooltip.below .tooltip-callout:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  left: 50%;
+  margin-left: -5px;
+}
+.credit-strength-calc .tooltip.above .tooltip-callout:before, .credit-strength-calc .tooltip.above .tooltip-callout:after {
+  top: 100%;
+}
+.credit-strength-calc .tooltip.above .tooltip-callout:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  left: 50%;
+  margin-left: -5px;
+}
+.credit-strength-calc .fa-circle-info {
+  position: relative;
+  cursor:pointer;
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .credit-strength-calc body.content-page h1 {
+    font-size: 26px;
+    line-height: 29px;
+ }
+  .credit-strength-calc .flex.flex-three {
+    display: block;
+ }
+  .credit-strength-calc .flex.flex-three .col-1 {
+    width: 100%;
+ }
+  .credit-strength-calc .flex.flex-three .col-2 {
+    width: 100%;
+    margin-top: 9px;
+ }
+  .credit-strength-calc .flex.flex-three .col-3 {
+    width: 100%;
+    margin-top: 8px;
+ }
+  .credit-strength-calc .flex-input {
+    width: 100%;
+ }
+  .credit-strength-calc .ui-widget.ui-widget-content {
+    width: 52%;
+ }
+  .credit-strength-calc .end {
+    width: 22%;
+    padding-left: 0px;
+ }
+  .credit-strength-calc .flex.flex-two {
+    display: block;
+    padding: 10px 0px 27px 0px;
+ }
+  .credit-strength-calc .flex.flex-two .col-2.text {
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 14px;
+    border: none;
+ }
+  .credit-strength-calc .flex.flex-two .col-2.text a {
+    text-decoration: none;
+    margin-top: 3px;
+    display: inline-block;
+ }
+  .credit-strength-calc .flex.flex-two-third {
+    display: block;
+    width: 100%;
+ }
+  .credit-strength-calc .col-two-third {
+    width: 100%;
+ }
+  .credit-strength-calc .col-two-third h3 {
+    margin: 0px !important;
+ }
+  .credit-strength-calc .col-two-third .flex.flex-two .col-1, .credit-strength-calc .col-two-third .flex.flex-two .col-2 {
+    width: 100%;
+ }
+  .credit-strength-calc .chart {
+    width: 100%;
+    text-align: center;
+ }
+  .credit-strength-calc .content-page > div h2 {
+    font-size: 22px;
+ }
+  .credit-strength-calc .col-one-third {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+ }
+}
+.credit-strength-calc .tables p {
+  text-align: center;
+  width: 100% !important;
+  margin: 0px !important;
+  font-size: 14px !important;
+  margin-top: -17px !important;
+}
+.credit-strength-calc .tables select {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  padding: 12px 10px;
+  text-align: center;
+  border-radius: 30px;
+  appearance: none;
+  background: #00b67a;
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border: 1px solid #00b67a;
+  margin: 10px auto 20px auto;
+  background: #00b67a url(../img/calc/icon-angle.png);
+  background-position: 94% 11px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+.credit-strength-calc .mobile {
+  display: none !important;
+}
+@media (max-width: 767px) {
+
+.credit-strength-calc div#paymentTypeError {
+    margin-top: 10px;
+}
+  .credit-strength-calc .data-quick {
+    display: none !important;
+ }
+  .credit-strength-calc .table-header .item {
+    width: 32.25%;
+ }
+  .credit-strength-calc .table-data .item {
+    width: 32.5%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+  .credit-strength-calc .table-footer .item {
+    width: 32.5%;
+ }
+  .credit-strength-calc .item.prod-logo img {
+    height: 28px !important;
+ }
+  .credit-strength-calc .table-header {
+    padding: 20px 0px;
+ }
+  .credit-strength-calc .table-header .label {
+    font-size: 12px;
+ }
+  .credit-strength-calc .table-footer .label {
+    font-size: 13px;
+ }
+  .credit-strength-calc .mobile {
+    display: block !important;
+ }
+  .credit-strength-calc .hide {
+    display: none !important;
+ }
+  .credit-strength-calc .show {
+    display: block !important;
+ }
+ 
+ 
+.credit-strength-calc .ui-widget.ui-widget-content {width: 72%;}
+
+.credit-strength-calc .start {
+    text-align: center;
+}
+
+.credit-strength-calc .end {
+    text-align: center;
+}
+
+.flex.flex-three   .start {
+    width: 25%!important;
+}
+.flex.flex-three   .end {
+        width: 25%!important;
+    }
+.flex.flex-three   .ui-widget.ui-widget-content {
+        width: 40%!important;
+}  
+.credit-strength-calc .tables p {
+    width: 80%!important;
+    margin: 0 auto!important;
+    display: block;
+}
+
+.credit-strength-calc .tables h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 0px;
+}
+}
