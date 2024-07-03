@@ -17,7 +17,7 @@
  */
 
 // Enqueue external CSS and JavaScript files
-function cc_strength_calc_enqueue_scripts() {
+function usbswiper_rate_calc_enqueue_scripts() {
     
     // Enqueue your custom stylesheet
     wp_enqueue_style('calc-style', plugins_url('style.css?v=4.3', __FILE__));
@@ -35,10 +35,10 @@ function cc_strength_calc_enqueue_scripts() {
     wp_enqueue_script('irr-calculator-script', plugins_url('script.js?v=4.5', __FILE__), array('jquery'), null, true);
 }
 
-add_action('wp_enqueue_scripts', 'cc_strength_calc_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'usbswiper_rate_calc_enqueue_scripts');
 
 // Define the shortcode function
-function cc_strength_calc_shortcode() {
+function usbswiper_rate_calc_shortcode() {
 
   ob_start();
   include(plugin_dir_path(__FILE__) . 'form-template.php');
@@ -47,4 +47,4 @@ function cc_strength_calc_shortcode() {
 }
 
 // Register the shortcode
-add_shortcode('cc_strength_calc_calculator', 'cc_strength_calc_shortcode');
+add_shortcode('usbswiper_rate_calc', 'usbswiper_rate_calc_shortcode');
