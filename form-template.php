@@ -54,7 +54,7 @@ $url = plugin_dir_url(__FILE__);
           <div class="col-1">
             <label
               >AVERAGE Monthly<span class="sub"
-                >No. of. Transactions <span class="req">*</span></span
+                >No. of Transactions <span class="req">*</span></span
               ></label
             >
           </div>
