@@ -32,7 +32,7 @@ function usbswiper_rate_calc_enqueue_scripts() {
     wp_enqueue_script('punchjs', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js', array(), null, true);
     
     // Enqueue your custom JavaScript file
-    wp_enqueue_script('irr-calculator-script', plugins_url('script.js?v=4.5', __FILE__), array('jquery'), null, true);
+    wp_enqueue_script('irr-calculator-script', plugins_url('script.js?v='.uniqid() , __FILE__), array('jquery'), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'usbswiper_rate_calc_enqueue_scripts');

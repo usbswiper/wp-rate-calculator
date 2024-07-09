@@ -25,239 +25,227 @@ let tableNetOutput5
 let tableNetOutput6
 
 jQuery(document).ready(function () {
-
-  jQuery( document ).tooltip();
-
-  $('.select-mobile').change(function () {
-    var selectedOption = $(this).val()
+  jQuery('.select-mobile').change(function () {
+    var selectedOption = jQuery(this).val()
     if (parseInt(selectedOption) === 2) {
-      console.log('square')
-      
-      $('.data-stripe ').removeClass('show')
-      $('.data-stripe ').addClass('hide')
+      jQuery('.data-stripe ').removeClass('show')
+      jQuery('.data-stripe ').addClass('hide')
 
-      $('.data-quick ').removeClass('show')
-      $('.data-quick ').addClass('hide')
+      jQuery('.data-quick ').removeClass('show')
+      jQuery('.data-quick ').addClass('hide')
 
-      $('.data-square ').removeClass('hide')
-      $('.data-square ').addClass('show')
-
+      jQuery('.data-square ').removeClass('hide')
+      jQuery('.data-square ').addClass('show')
     } else if (parseInt(selectedOption) === 3) {
-        console.log('quick')
-        
-        $('.data-stripe ').removeClass('show')
-        $('.data-stripe ').addClass('hide')
-  
-        $('.data-square ').removeClass('show')
-        $('.data-square ').addClass('hide')
-
-        $('.data-quick ').removeClass('hide')
-        $('.data-quick ').addClass('show')
-
-      
-    } else {
-      console.log('stripe')
-      $('.data-stripe ').removeClass('hide')
-      $('.data-stripe ').addClass('show')
-
-      $('.data-quick ').removeClass('show')
-      $('.data-quick ').addClass('hide')
+      jQuery('.data-stripe ').removeClass('show')
+      jQuery('.data-stripe ').addClass('hide')
 
       jQuery('.data-square ').removeClass('show')
-      $('.data-square ').addClass('hide')
+      jQuery('.data-square ').addClass('hide')
+
+      jQuery('.data-quick ').removeClass('hide')
+      jQuery('.data-quick ').addClass('show')
+    } else {
+      jQuery('.data-stripe ').removeClass('hide')
+      jQuery('.data-stripe ').addClass('show')
+
+      jQuery('.data-quick ').removeClass('show')
+      jQuery('.data-quick ').addClass('hide')
+
+      jQuery('.data-square ').removeClass('show')
+      jQuery('.data-square ').addClass('hide')
     }
   })
 
   function initializeSlider1() {
-    $('#input1').slider({
+    jQuery('#input1').slider({
       min: minRange1,
       max: maxRange1,
       step: 0.5,
       value: 166.5,
       slide: function (event, ui) {
+        jQuery('#input1Value').val(formatNumberWithCommas(ui.value.toFixed(2))) // Set input field value with 2 decimal places
         calcTransactionAmount()
-        $('#input1Value').val(formatNumberWithCommas(ui.value.toFixed(2))) // Set input field value with 2 decimal places
       },
     })
   }
-
-  $('#endInputValue1').on('input', function () {
-    var newMaxValue = parseFloat($(this).val())
-    maxRange1 = newMaxValue
-    initializeSlider1()
-  })
-
-  $('#startInputValue1').on('input', function () {
-    var newMinValue = parseFloat($(this).val())
-    minRange1 = newMinValue
-    initializeSlider1()
-  })
 
   // Initialize the slider
   initializeSlider1()
 
   // Set initial value for input field
-  $('#input1Value').val($('#input1').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input1Value').val(jQuery('#input1').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
   // Update slider value when input field changes
-  $('#input1Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input1Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 1000) {
-      $('#input1').slider('value', value)
+      jQuery('#input1').slider('value', value)
       calcTransactionAmount()
     }
   })
 
   const calcTransactionAmount = () => {
-    let input1Value = $('#input1Value').val()
-    let input2Value = $('#input2Value').val()
+    let input1Value = jQuery('#input1Value').val()
+    let input2Value = jQuery('#input2Value').val()
     output1 =
       parseFloat(removeNumberWithCommas(input1Value)) *
       parseFloat(removeNumberWithCommas(input2Value))
 
-    $('.output1').html('$' + formatNumberWithCommas(output1.toFixed(0)))
+    jQuery('.output1').html('$' + formatNumberWithCommas(output1.toFixed(0)))
     createTable()
   }
 
   function initializeSlider2() {
-    $('#input2').slider({
+    jQuery('#input2').slider({
       min: minRange2,
       max: maxRange2,
       step: 50,
       value: 1000,
       slide: function (event, ui) {
+        jQuery('#input2Value').val(formatNumberWithCommas(ui.value.toFixed(0))) // Set input field value with 2 decimal places
         calcTransactionAmount()
-        $('#input2Value').val(formatNumberWithCommas(ui.value.toFixed(2))) // Set input field value with 2 decimal places
       },
     })
   }
 
-  $('#endInputValue2').on('input', function () {
-    var newMaxValue = parseFloat($(this).val())
-    maxRange2 = newMaxValue
-    initializeSlider2()
-  })
-
-  $('#startInputValue2').on('input', function () {
-    var newMinValue = parseFloat($(this).val())
-    minRange2 = newMinValue
-    initializeSlider2()
-  })
-
   // Initialize the slider
   initializeSlider2()
 
-  $('#input2Value').val($('#input2').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input2Value').val(jQuery('#input2').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
-  $('#input2Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input2Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 1000) {
-      $('#input2').slider('value', value)
+      jQuery('#input2').slider('value', value)
       calcTransactionAmount()
     }
   })
 
-  $('#input3').slider({
+  jQuery('#endInputValue1').on('input', function () {
+    var newMaxValue = parseFloat(jQuery(this).val())
+    maxRange1 = newMaxValue
+    initializeSlider1()
+  })
+
+  jQuery('#startInputValue1').on('input', function () {
+    var newMinValue = parseFloat(jQuery(this).val())
+    minRange1 = newMinValue
+    initializeSlider1()
+  })
+
+  jQuery('#endInputValue2').on('input', function () {
+    var newMaxValue = parseFloat(jQuery(this).val())
+    maxRange2 = newMaxValue
+    initializeSlider2()
+  })
+
+  jQuery('#startInputValue2').on('input', function () {
+    var newMinValue = parseFloat(jQuery(this).val())
+    minRange2 = newMinValue
+    initializeSlider2()
+  })
+
+  jQuery('#input3').slider({
     min: 0,
     max: 100,
     step: 5,
     value: 10,
     slide: function (event, ui) {
-      $('#input3Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input3Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  $('#input3Value').val($('#input3').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input3Value').val(jQuery('#input3').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
-  $('#input3Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input3Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 100) {
       validatePaymentTypeTotal()
-      $('#input3').slider('value', value)
+      jQuery('#input3').slider('value', value)
       createDognutChart()
       calcTransactionAmount()
     }
   })
 
-  $('#input4').slider({
+  jQuery('#input4').slider({
     min: 0,
     max: 100,
     step: 5,
     value: 25,
     slide: function (event, ui) {
-      $('#input4Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input4Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  $('#input4Value').val($('#input4').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input4Value').val(jQuery('#input4').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
-  $('#input4Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input4Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 100) {
-      $('#input4').slider('value', value)
+      jQuery('#input4').slider('value', value)
       createDognutChart()
       calcTransactionAmount()
     }
   })
 
-  $('#input5').slider({
+  jQuery('#input5').slider({
     min: 0,
     max: 100,
     step: 5,
     value: 40,
     slide: function (event, ui) {
-      $('#input5Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input5Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  $('#input5Value').val($('#input5').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input5Value').val(jQuery('#input5').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
-  $('#input5Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input5Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 100) {
-      $('#input5').slider('value', value)
+      jQuery('#input5').slider('value', value)
       createDognutChart()
       calcTransactionAmount()
     }
   })
 
-  $('#input6').slider({
+  jQuery('#input6').slider({
     min: 0,
     max: 100,
     step: 5,
     value: 25,
     slide: function (event, ui) {
-      $('#input6Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input6Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  $('#input6Value').val($('#input6').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input6Value').val(jQuery('#input6').slider('value').toFixed(2)) // Set initial value with 2 decimal places
 
-  $('#input6Value').on('input', function () {
-    var value = parseFloat($(this).val())
+  jQuery('#input6Value').on('input', function () {
+    var value = parseFloat(jQuery(this).val())
     if (!isNaN(value) && value >= 0 && value <= 100) {
-      $('#input6').slider('value', value)
+      jQuery('#input6').slider('value', value)
       createDognutChart()
       calcTransactionAmount()
     }
   })
 
   const validatePaymentTypeTotal = () => {
-    let v1 = parseFloat($('#input3Value').val())
-    let v2 = parseFloat($('#input4Value').val())
-    let v3 = parseFloat($('#input5Value').val())
-    let v4 = parseFloat($('#input6Value').val())
+    let v1 = parseFloat(jQuery('#input3Value').val())
+    let v2 = parseFloat(jQuery('#input4Value').val())
+    let v3 = parseFloat(jQuery('#input5Value').val())
+    let v4 = parseFloat(jQuery('#input6Value').val())
 
     if (v1 + v2 + v3 + v4 != 100) {
-      alert('Payment type values should add upto 100%')
       return false
     }
   }
@@ -275,10 +263,10 @@ const createDognutChart = (check) => {
     inputPie3 = 40
     inputPie4 = 25
   } else {
-    inputPie1 = $('#input3Value').val()
-    inputPie2 = $('#input4Value').val()
-    inputPie3 = $('#input5Value').val()
-    inputPie4 = $('#input6Value').val()
+    inputPie1 = jQuery('#input3Value').val()
+    inputPie2 = jQuery('#input4Value').val()
+    inputPie3 = jQuery('#input5Value').val()
+    inputPie4 = jQuery('#input6Value').val()
   }
 
   let total =
@@ -286,14 +274,14 @@ const createDognutChart = (check) => {
     parseFloat(inputPie2) +
     parseFloat(inputPie3) +
     parseFloat(inputPie4)
-  $('.output').html(total + '.00%')
+  jQuery('.output').html(total + '.00%')
 
   if (total !== 100) {
     jQuery('#paymentTypeError').show()
-    $('.output').addClass('error')
+    jQuery('.output').addClass('error')
   } else {
     jQuery('#paymentTypeError').hide()
-    $('.output').removeClass('error')
+    jQuery('.output').removeClass('error')
   }
 
   const labels = [
@@ -343,108 +331,87 @@ const createDognutChart = (check) => {
 createDognutChart(false)
 
 const createTable = () => {
-  let avgMonthlyTransactions = $('#input2Value').val()
-  let ccgooglepay = $('#input5Value').val()
-  let terminal = $('#input3Value').val()
-  let keyed = $('#input4Value').val()
-  let paypal = $('#input6Value').val()
+  let avgMonthlyTransactions = jQuery('#input2Value').val()
+  let ccgooglepay = jQuery('#input5Value').val()
+  let terminal = jQuery('#input3Value').val()
+  let keyed = jQuery('#input4Value').val()
+  let paypal = jQuery('#input6Value').val()
 
   tableOutput1 =
     (output1 * (2.69 / 100) + (2.29 / 100) * avgMonthlyTransactions) *
     (ccgooglepay / 100)
-  $('.tableOutput1 span').html("$"+
-    formatNumberWithCommas(tableOutput1.toFixed(2))
+  jQuery('.tableOutput1 span').html(
+    '$' + formatNumberWithCommas(tableOutput1.toFixed(2))
   )
 
   tableOutput2 =
-    (output1 * (2.99 / 100) + 0 * avgMonthlyTransactions) *
-    (ccgooglepay / 100)
-  $('.tableOutput2 span').html("$"+
-    formatNumberWithCommas(tableOutput2.toFixed(2))
+    (output1 * (2.99 / 100) + 0 * avgMonthlyTransactions) * (ccgooglepay / 100)
+  jQuery('.tableOutput2 span').html(
+    '$' + formatNumberWithCommas(tableOutput2.toFixed(2))
   )
 
   tableOutput3 =
-    (output1 * (2.9 / 100) + 0.3 * avgMonthlyTransactions) *
-    (ccgooglepay / 100)
-  $('.tableOutput3 span').html("$"+
-    formatNumberWithCommas(tableOutput3.toFixed(2))
+    (output1 * (2.9 / 100) + 0.3 * avgMonthlyTransactions) * (ccgooglepay / 100)
+  jQuery('.tableOutput3 span').html(
+    '$' + formatNumberWithCommas(tableOutput3.toFixed(2))
   )
 
   tableOutput4 =
-    (output1 * (3.3 / 100) + 0.3 * avgMonthlyTransactions) *
-    (ccgooglepay / 100)
-  $('.tableOutput4 span').html("$"+
-    formatNumberWithCommas(tableOutput4.toFixed(2))
+    (output1 * (3.3 / 100) + 0.3 * avgMonthlyTransactions) * (ccgooglepay / 100)
+  jQuery('.tableOutput4 span').html(
+    '$' + formatNumberWithCommas(tableOutput4.toFixed(2))
   )
 
-  setLightDarkClasses(
-    tableOutput1,
-    tableOutput2,
-    tableOutput3,
-    tableOutput4,
-    0
-  )
+  setLightDarkClasses(tableOutput1, tableOutput2, tableOutput3, tableOutput4, 0)
 
   tableOutput5 =
-    (output1 * (2.29 / 100) + 0.09 * avgMonthlyTransactions) *
-    (terminal / 100)
-  $('.tableOutput5 span').html("$"+
-    formatNumberWithCommas(tableOutput5.toFixed(2))
+    (output1 * (2.29 / 100) + 0.09 * avgMonthlyTransactions) * (terminal / 100)
+  jQuery('.tableOutput5 span').html(
+    '$' + formatNumberWithCommas(tableOutput5.toFixed(2))
   )
 
   tableOutput6 =
-    (output1 * (2.5 / 100) + 0 * avgMonthlyTransactions) *
-    (terminal / 100)
-  $('.tableOutput6 span').html("$"+
-    formatNumberWithCommas(tableOutput6.toFixed(2))
+    (output1 * (2.5 / 100) + 0 * avgMonthlyTransactions) * (terminal / 100)
+  jQuery('.tableOutput6 span').html(
+    '$' + formatNumberWithCommas(tableOutput6.toFixed(2))
   )
 
   tableOutput7 =
-    (output1 * (2.7 / 100) + 0.05 * avgMonthlyTransactions) *
-    (terminal / 100)
-  $('.tableOutput7 span').html("$"+
-    formatNumberWithCommas(tableOutput7.toFixed(2))
+    (output1 * (2.7 / 100) + 0.05 * avgMonthlyTransactions) * (terminal / 100)
+  jQuery('.tableOutput7 span').html(
+    '$' + formatNumberWithCommas(tableOutput7.toFixed(2))
   )
 
   tableOutput8 =
-    (output1 * (2.6 / 100) + 0.1 * avgMonthlyTransactions) *
-    (terminal / 100)
-  $('.tableOutput8 span').html("$"+
-    formatNumberWithCommas(tableOutput8.toFixed(2))
+    (output1 * (2.6 / 100) + 0.1 * avgMonthlyTransactions) * (terminal / 100)
+  jQuery('.tableOutput8 span').html(
+    '$' + formatNumberWithCommas(tableOutput8.toFixed(2))
   )
 
-  setLightDarkClasses(
-    tableOutput5,
-    tableOutput6,
-    tableOutput7,
-    tableOutput8,
-    4
-  )
+  setLightDarkClasses(tableOutput5, tableOutput6, tableOutput7, tableOutput8, 4)
 
   tableOutput9 =
-    (output1 * (2.69 / 100) + 0.49 * avgMonthlyTransactions) *
-    (keyed / 100)
-  $('.tableOutput9 span').html("$"+
-    formatNumberWithCommas(tableOutput9.toFixed(2))
+    (output1 * (2.69 / 100) + 0.49 * avgMonthlyTransactions) * (keyed / 100)
+  jQuery('.tableOutput9 span').html(
+    '$' + formatNumberWithCommas(tableOutput9.toFixed(2))
   )
 
   tableOutput10 =
     (output1 * (3.5 / 100) + 0 * avgMonthlyTransactions) * (keyed / 100)
-  $('.tableOutput10 span').html("$"+
-    formatNumberWithCommas(tableOutput10.toFixed(2))
+  jQuery('.tableOutput10 span').html(
+    '$' + formatNumberWithCommas(tableOutput10.toFixed(2))
   )
 
   tableOutput11 =
     (output1 * (3.4 / 100) + 0.3 * avgMonthlyTransactions) * (keyed / 100)
-  $('.tableOutput11 span').html("$"+
-    formatNumberWithCommas(tableOutput11.toFixed(2))
+  jQuery('.tableOutput11 span').html(
+    '$' + formatNumberWithCommas(tableOutput11.toFixed(2))
   )
 
   tableOutput12 =
-    (output1 * (3.5 / 100) + 0.15 * avgMonthlyTransactions) *
-    (keyed / 100)
-  $('.tableOutput12 span').html("$"+
-    formatNumberWithCommas(tableOutput12.toFixed(2))
+    (output1 * (3.5 / 100) + 0.15 * avgMonthlyTransactions) * (keyed / 100)
+  jQuery('.tableOutput12 span').html(
+    '$' + formatNumberWithCommas(tableOutput12.toFixed(2))
   )
 
   setLightDarkClasses(
@@ -456,23 +423,23 @@ const createTable = () => {
   )
 
   tableNetOutput1 = tableOutput1 + tableOutput5 + tableOutput9
-  $('.tableNetOutput1 ').html("$"+
-    formatNumberWithCommas(tableNetOutput1.toFixed(2))
+  jQuery('.tableNetOutput1 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput1.toFixed(2))
   )
 
   tableNetOutput2 = tableOutput2 + tableOutput6 + tableOutput10
-  $('.tableNetOutput2 ').html("$"+
-    formatNumberWithCommas(tableNetOutput2.toFixed(2))
+  jQuery('.tableNetOutput2 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput2.toFixed(2))
   )
 
   tableNetOutput3 = tableOutput3 + tableOutput7 + tableOutput11
-  $('.tableNetOutput3 ').html("$"+
-    formatNumberWithCommas(tableNetOutput3.toFixed(2))
+  jQuery('.tableNetOutput3 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput3.toFixed(2))
   )
 
   tableNetOutput4 = tableOutput4 + tableOutput8 + tableOutput12
-  $('.tableNetOutput4 ').html("$"+
-    formatNumberWithCommas(tableNetOutput4.toFixed(2))
+  jQuery('.tableNetOutput4 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput4.toFixed(2))
   )
 
   setLightDarkClasses(
@@ -485,38 +452,30 @@ const createTable = () => {
   )
 
   tableOutput13 =
-    (output1 * (3.59 / 100) + 0.49 * avgMonthlyTransactions) *
-    (paypal / 100)
-  $('.tableOutput13 span').html("$"+
-    formatNumberWithCommas(tableOutput13.toFixed(2))
+    (output1 * (3.59 / 100) + 0.49 * avgMonthlyTransactions) * (paypal / 100)
+  jQuery('.tableOutput13 span').html(
+    '$' + formatNumberWithCommas(tableOutput13.toFixed(2))
   )
 
   tableOutput14 =
     (output1 * (2.99 / 100) + 0 * avgMonthlyTransactions) * (paypal / 100)
-  $('.tableOutput14 span').html("$"+
-    formatNumberWithCommas(tableOutput14.toFixed(2))
+  jQuery('.tableOutput14 span').html(
+    '$' + formatNumberWithCommas(tableOutput14.toFixed(2))
   )
 
   setLightDarkClasses(tableOutput13, tableOutput14, 0, 0, 12, 'dual')
 
   tableNetOutput5 = tableOutput13 + tableNetOutput1
-  $('.tableNetOutput5 ').html("$"+
-    formatNumberWithCommas(tableNetOutput5.toFixed(2))
+  jQuery('.tableNetOutput5 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput5.toFixed(2))
   )
 
   tableNetOutput6 = tableOutput14 + tableNetOutput2
-  $('.tableNetOutput6 ').html("$"+
-    formatNumberWithCommas(tableNetOutput6.toFixed(2))
+  jQuery('.tableNetOutput6 ').html(
+    '$' + formatNumberWithCommas(tableNetOutput6.toFixed(2))
   )
 
-  setLightDarkClasses(
-    tableNetOutput5,
-    tableNetOutput6,
-    0,
-    0,
-    4,
-    'netdual'
-  )
+  setLightDarkClasses(tableNetOutput5, tableNetOutput6, 0, 0, 4, 'netdual')
 }
 
 function setLightDarkClasses(
@@ -546,43 +505,65 @@ function setLightDarkClasses(
   let minValue = Math.min(...values)
   let minIndex = values.indexOf(minValue)
 
-  if (type === 'dual') {
-    console.log("minValue",minValue)
-    console.log("minIndex",minIndex)
-    }
-
-  if (type == 'net' || type == 'netdual') {
-    $(
+  if (type == 'net') {
+    jQuery(
       '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
     ).addClass('dark')
-    $(
+    jQuery(
       '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
     ).removeClass('light')
 
     for (let i = 0; i < 4; i++) {
       if (i !== minIndex) {
-        $('.tableNetOutput' + (parseInt(i + 1) + parseInt(gap))).addClass(
+        jQuery('.tableNetOutput' + (parseInt(i + 1) + parseInt(gap))).addClass(
           'light'
         )
-        $(
+        jQuery(
           '.tableNetOutput' + (parseInt(i + 1) + parseInt(gap))
         ).removeClass('dark')
       }
     }
-  } else {
-    console.log("dual dark here", minIndex)
-    // Add class 'dark' to the input with the lowest value
-    $('.tableOutput' + (minIndex + (parseInt(1) + parseInt(gap)))).addClass('dark')
-    $('.tableOutput' + (minIndex + (parseInt(1) + parseInt(gap)))).removeClass('light')
+  } else if (type == 'netdual') {
+    jQuery('.tableNetOutput5').removeClass('dark')
+    jQuery('.tableNetOutput6').removeClass('dark')
+    jQuery('.tableNetOutput5').removeClass('light')
+    jQuery('.tableNetOutput6').removeClass('light')
+
+    jQuery(
+      '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
+    ).addClass('dark')
+    jQuery(
+      '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
+    ).removeClass('light')
+  } else if (type == 'dual') {
+    jQuery(
+      '.tableOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
+    ).addClass('dark')
+    jQuery(
+      '.tableOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
+    ).removeClass('light')
 
     // Add class 'light' to the rest of the inputs
     for (let i = 0; i < 4; i++) {
       if (i !== minIndex) {
-        $('.tableOutput' + (i + 1) + parseInt(gap)).addClass('light')
+        jQuery('.tableOutput' + (parseInt(i + 1) + parseInt(gap))).addClass(
+          'light'
+        )
+      }
+    }
+  } else {
+    // Add class 'dark' to the input with the lowest value
+    jQuery('.tableOutput' + (minIndex + 1 + parseInt(gap))).addClass('dark')
+
+    // Add class 'light' to the rest of the inputs
+    for (let i = 0; i < 4; i++) {
+      if (i !== minIndex) {
+        jQuery('.tableOutput' + (i + 1) + parseInt(gap)).addClass('light')
       }
     }
   }
 }
+
 function formatNumberWithCommas(number) {
   // Convert number to string
   let numberString = number.toString()
