@@ -100,7 +100,7 @@ jQuery(document).ready(function () {
     jQuery('#input2').slider({
       min: minRange2,
       max: maxRange2,
-      step: 50,
+      step: 1,
       value: 1000,
       slide: function (event, ui) {
         jQuery('#input2Value').val(formatNumberWithCommas(ui.value.toFixed(0))) // Set input field value with 2 decimal places
@@ -149,7 +149,7 @@ jQuery(document).ready(function () {
   jQuery('#input3').slider({
     min: 0,
     max: 100,
-    step: 5,
+    step: 1,
     value: 10,
     slide: function (event, ui) {
       jQuery('#input3Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
@@ -173,7 +173,7 @@ jQuery(document).ready(function () {
   jQuery('#input4').slider({
     min: 0,
     max: 100,
-    step: 5,
+    step: 1,
     value: 25,
     slide: function (event, ui) {
       jQuery('#input4Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
@@ -196,7 +196,7 @@ jQuery(document).ready(function () {
   jQuery('#input5').slider({
     min: 0,
     max: 100,
-    step: 5,
+    step: 1,
     value: 40,
     slide: function (event, ui) {
       jQuery('#input5Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
@@ -219,7 +219,7 @@ jQuery(document).ready(function () {
   jQuery('#input6').slider({
     min: 0,
     max: 100,
-    step: 5,
+    step: 1,
     value: 25,
     slide: function (event, ui) {
       jQuery('#input6Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
@@ -551,6 +551,14 @@ function setLightDarkClasses(
         )
       }
     }
+
+    // handle equal case 
+    if(tableOutput1 == tableOutput2) {
+      jQuery('.tableOutput13').removeClass('dark')
+      jQuery('.tableOutput13').addClass('light')
+      jQuery('.tableOutput14').removeClass('dark')
+    }
+
   } else {
     // Add class 'dark' to the input with the lowest value
     jQuery('.tableOutput' + (minIndex + 1 + parseInt(gap))).addClass('dark')
