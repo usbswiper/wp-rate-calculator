@@ -654,7 +654,10 @@
   .credit-strength-calc .show {
     display: block !important;
  }
- 
+
+  .mobile #mobile_dropdown_message {
+    color:red;
+  }
  
 .credit-strength-calc .ui-widget.ui-widget-content {width: 72%;}
 
