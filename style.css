@@ -655,7 +655,7 @@
     display: block !important;
  }
 
-  .mobile mobile_dropdown_message {
+  #mobile_dropdown_message {
     color:red;
   }
  
