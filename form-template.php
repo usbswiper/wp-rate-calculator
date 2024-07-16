@@ -193,7 +193,7 @@ $url = plugin_dir_url(__FILE__);
       </div>
       <div class="tables">
         <h2>USBSwiper vs. Competitors</h2>
-        <p class="mobile">Choose a competitor and compare payment fees</p>
+        <p class="mobile">Tap the button to compare other competitors</p>
         <select class="mobile select-mobile">
           <option value="1">USBSwiper vs. Stripe</option>
           <option value="2">USBSwiper vs. Square</option>
