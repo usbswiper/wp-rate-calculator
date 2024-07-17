@@ -20,7 +20,7 @@
 function usbswiper_rate_calc_enqueue_scripts() {
     
     // Enqueue your custom stylesheet
-    wp_enqueue_style('calc-style', plugins_url('style.css?v=4.3', __FILE__));
+    wp_enqueue_style('calc-style', plugins_url('style.css?v='.uniqid(), __FILE__));
     wp_enqueue_style('jqueryui', 'https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css');
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');

@@ -229,7 +229,7 @@
   padding: 20px;
   text-align: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .credit-strength-calc .table-footer .label {
@@ -628,7 +628,7 @@
     vertical-align: middle;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
  }
   .credit-strength-calc .table-footer .item {
     width: 32.5%;
@@ -689,5 +689,9 @@
     font-weight: 700;
     font-size: 23px;
     margin-bottom: 0px;
+}
+.credit-strength-calc .item,
+.credit-strength-calc .item span{
+    font-size: 12px!important;
 }
 }

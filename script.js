@@ -112,7 +112,7 @@ jQuery(document).ready(function () {
   // Initialize the slider
   initializeSlider2()
 
-  jQuery('#input2Value').val(jQuery('#input2').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input2Value').val(jQuery('#input2').slider('value').toFixed(0)) // Set initial value with 0 decimal places
 
   jQuery('#input2Value').on('input', function () {
     var value = parseFloat(jQuery(this).val())
@@ -152,13 +152,13 @@ jQuery(document).ready(function () {
     step: 1,
     value: 10,
     slide: function (event, ui) {
-      jQuery('#input3Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input3Value').val(ui.value.toFixed(0)) // Set input field value with 0 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  jQuery('#input3Value').val(jQuery('#input3').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input3Value').val(jQuery('#input3').slider('value').toFixed(0)) // Set initial value with 0 decimal places
 
   jQuery('#input3Value').on('input', function () {
     var value = parseFloat(jQuery(this).val())
@@ -176,13 +176,13 @@ jQuery(document).ready(function () {
     step: 1,
     value: 25,
     slide: function (event, ui) {
-      jQuery('#input4Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input4Value').val(ui.value.toFixed(0)) // Set input field value with 0 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  jQuery('#input4Value').val(jQuery('#input4').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input4Value').val(jQuery('#input4').slider('value').toFixed(0)) // Set initial value with 0 decimal places
 
   jQuery('#input4Value').on('input', function () {
     var value = parseFloat(jQuery(this).val())
@@ -199,13 +199,13 @@ jQuery(document).ready(function () {
     step: 1,
     value: 40,
     slide: function (event, ui) {
-      jQuery('#input5Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input5Value').val(ui.value.toFixed(0)) // Set input field value with 0 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  jQuery('#input5Value').val(jQuery('#input5').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input5Value').val(jQuery('#input5').slider('value').toFixed(0)) // Set initial value with 0 decimal places
 
   jQuery('#input5Value').on('input', function () {
     var value = parseFloat(jQuery(this).val())
@@ -222,13 +222,13 @@ jQuery(document).ready(function () {
     step: 1,
     value: 25,
     slide: function (event, ui) {
-      jQuery('#input6Value').val(ui.value.toFixed(2)) // Set input field value with 2 decimal places
+      jQuery('#input6Value').val(ui.value.toFixed(0)) // Set input field value with 0 decimal places
       createDognutChart()
       calcTransactionAmount()
     },
   })
 
-  jQuery('#input6Value').val(jQuery('#input6').slider('value').toFixed(2)) // Set initial value with 2 decimal places
+  jQuery('#input6Value').val(jQuery('#input6').slider('value').toFixed(0)) // Set initial value with 0 decimal places
 
   jQuery('#input6Value').on('input', function () {
     var value = parseFloat(jQuery(this).val())
@@ -504,8 +504,9 @@ function setLightDarkClasses(
   // Find the minimum value and its index
   let minValue = Math.min(...values)
   let minIndex = values.indexOf(minValue)
-
+  
   if (type == 'net') {
+
     jQuery(
       '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
     ).addClass('dark')
@@ -523,11 +524,22 @@ function setLightDarkClasses(
         ).removeClass('dark')
       }
     }
+
+
+    if(minValue == 0) {
+      for (let i = 0; i < 4; i++) {
+        jQuery('.tableNetOutput'+ (parseInt(i + 1) + parseInt(gap))).removeClass('dark')
+        jQuery('.tableNetOutput'+  (parseInt(i + 1) + parseInt(gap))).removeClass('light')
+        jQuery('.tableNetOutput'+  (parseInt(i + 1) + parseInt(gap))).addClass('light')
+      }
+    }
+
+
+
   } else if (type == 'netdual') {
     jQuery('.tableNetOutput5').removeClass('dark')
     jQuery('.tableNetOutput6').removeClass('dark')
     jQuery('.tableNetOutput5').removeClass('light')
-    jQuery('.tableNetOutput6').removeClass('light')
 
     jQuery(
       '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
@@ -535,6 +547,16 @@ function setLightDarkClasses(
     jQuery(
       '.tableNetOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
     ).removeClass('light')
+
+    if(minValue == 0) {
+      for (let i = 5; i <= 6; i++) {
+        jQuery('.tableNetOutput'+i).removeClass('dark')
+        jQuery('.tableNetOutput'+i).removeClass('light')
+        jQuery('.tableNetOutput'+i).addClass('light')
+      }
+    }
+
+    
   } else if (type == 'dual') {
     jQuery(
       '.tableOutput' + (minIndex + (parseInt(1) + parseInt(gap)))
@@ -560,15 +582,26 @@ function setLightDarkClasses(
     }
 
   } else {
+
     // Add class 'dark' to the input with the lowest value
-    jQuery('.tableOutput' + (minIndex + 1 + parseInt(gap))).addClass('dark')
+    jQuery('.tableOutput' + (parseInt(minIndex) + parseInt(1) + parseInt(gap))).addClass('dark')
+    jQuery('.tableOutput' + (parseInt(minIndex) + parseInt(1) + parseInt(gap))).removeClass('light')
 
     // Add class 'light' to the rest of the inputs
     for (let i = 0; i < 4; i++) {
       if (i !== minIndex) {
-        jQuery('.tableOutput' + (i + 1) + parseInt(gap)).addClass('light')
+        jQuery('.tableOutput' +  (parseInt(i + 1) + parseInt(gap))).addClass('light')
       }
     }
+
+    if(minValue == 0) {
+      for (let i = 0; i < 4; i++) {
+        jQuery('.tableOutput'+ (parseInt(i + 1) + parseInt(gap))).removeClass('dark')
+        jQuery('.tableOutput'+  (parseInt(i + 1) + parseInt(gap))).removeClass('light')
+        jQuery('.tableOutput'+  (parseInt(i + 1) + parseInt(gap))).addClass('light')
+      }
+    }
+
   }
 }
 

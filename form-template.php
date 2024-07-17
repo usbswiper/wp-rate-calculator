@@ -122,7 +122,7 @@ $url = plugin_dir_url(__FILE__);
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/1.png" />
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/2.png" />
                   </div>
-                  <input type="text" id="input3Value" value="10.00" />
+                  <input type="text" id="input3Value" value="10" />
                 </div>
                 <div class="slide flex">
                   <div class="start">0</div>
