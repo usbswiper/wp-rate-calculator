@@ -110,7 +110,7 @@ $url = plugin_dir_url(__FILE__);
 
         <div class="flex flex-two-third">
           <div class="col-two-third">
-            <h3 id="percentage_payment_types">% OF TRANSACTIONS BY PAYMENT TYPE</h3>
+            <h3 id="percentage_payment_types">ENTER % OF TRANSACTIONS BY PAYMENT TYPE</h3>
             <div id="paymentTypeError" style="display: none">
               Payment type split needs to equal 100%
             </div>
