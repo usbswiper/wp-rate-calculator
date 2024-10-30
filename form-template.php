@@ -131,7 +131,7 @@ $url = plugin_dir_url(__FILE__);
                 </div>
               </div>
               <div class="col-2">
-                <div class="label">Keyed In</div>
+                <div class="label">* Keyed In</div>
                 <div class="input input-img img2">
                   <div class="images">
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/3.png" />
@@ -148,7 +148,7 @@ $url = plugin_dir_url(__FILE__);
             </div>
             <div class="flex flex-two">
               <div class="col-1">
-                <div class="label">Invoices Paid With</div>
+                <div class="label">* Invoices Paid With</div>
                 <div class="input input-img">
                   <div class="images">
                     <img src="<?php echo $url; ?>img/calc/credit-card-comparison/6.png" />
