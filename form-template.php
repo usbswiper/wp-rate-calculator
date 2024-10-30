@@ -217,7 +217,7 @@ $url = plugin_dir_url(__FILE__);
           </div>
           <div class="table-data">
             <div class="label label-logo">
-              Invoicing
+              * Invoicing
               <div class="images">
                 <img src="<?php echo $url; ?>img/calc/credit-card-comparison/6.png" />
                 <img src="<?php echo $url; ?>img/calc/credit-card-comparison/5.png" />
@@ -260,7 +260,7 @@ $url = plugin_dir_url(__FILE__);
           </div>
           <div class="table-data">
             <div class="label label-logo">
-              Keyed-In Cards
+              * Keyed-In Cards
               <div class="images img1">
                 <img src="<?php echo $url; ?>img/calc/credit-card-comparison/3.png" />
                 <img src="<?php echo $url; ?>img/calc/credit-card-comparison/4.png" />
